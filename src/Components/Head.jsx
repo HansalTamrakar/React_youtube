@@ -10,23 +10,23 @@ const Head = () => {
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
-  async function getSearchSuggestions() {
-    await fetch(
-      "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=" +
-        searchquery,
-      { mode: "no-cors" }
-    )
-      .then((value) => {
-        console.log(value);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+  // async function getSearchSuggestions() {
+  //   fetch(
+  //     "https://clients1.google.com/complete/search?hl=en&output=toolbar&q=home",
+  //     {
+  //       mode: "no-cors",
+  //     }
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     })
+  //     .catch((error) => console.error("Error:", error));
+  // }
 
-  useEffect(() => {
-    getSearchSuggestions();
-  }, [searchquery]);
+  // useEffect(() => {
+  //   getSearchSuggestions();
+  // }, [searchquery]);
 
   return (
     <div className="grid grid-flow-col p-2 m-2 shadow-lg">
